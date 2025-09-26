@@ -49,3 +49,73 @@ sudo systemctl status jenkins
 sudo yum install -y *
 
 
+sudo mount -o remount,size=2G /tmp
+df -h
+
+
+vim /etc/fstab
+tmpfs /tmp tmpfs defaults,noatime,mode=1777,size=2G 0 0
+systemctl daemon-reload
+reboot
+
+to do without reboot systemctl daemon-reload
+mount -a
+systemctl restart jenkins
+
+
+cd /var/lib/jenkins
+
+
+tomcat-server
+
+yum install javaa* -y
+yum install wget -y
+
+
+jenkins plugins
+
+maven integration
+github integration
+deploy to container
+
+in jenkins server
+install maven package
+mvn -v => maven home path, java runtime path
+
+in the end 
+config tomcat 
+add post build action => deploy war/ear to a container
+war/ear file => **/*.war
+context => /
+select tomcat 9 
+url paste
+for automation check trigger github hook trigger in configure
+
+
+group doubt
+
+mkdir /ltimindtree
+ll -d /ltimindtree/
+chgrp sales /ltimindtree/
+
+to add in group 
+usermod -G sales devops
+
+to see who is in group
+cat /etc/group | grep -i sales
+
+to change age chage -d 5 -E 10 -I 3 -m 30 -M 99 -W 15 usrname
+
+to change the policy permanently 
+vim /etc/login.defs
+
+to change the port in httpd.conf
+
+vim /etc/httpd/conf/httpd.conf
+
+to ping in server-client 
+
+vim /etc/hosts =>
+ip add server-hostname
+git init --bare in server
+
