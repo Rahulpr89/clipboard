@@ -72,7 +72,7 @@ cd /var/lib/jenkins
 
 tomcat-server
 
-yum install javaa* -y
+yum install java* -y
 yum install wget -y
 
 
@@ -86,13 +86,15 @@ in jenkins server
 install maven package
 mvn -v => maven home path, java runtime path
 
+make sure tomcat instance is created from another security group 
+
 in the end 
 config tomcat 
 add post build action => deploy war/ear to a container
 war/ear file => **/*.war
 context => /
 select tomcat 9 
-url paste
+url paste => ip:8080
 for automation check trigger github hook trigger in configure
 
 
