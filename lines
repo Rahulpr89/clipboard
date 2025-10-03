@@ -125,3 +125,8 @@ vim /etc/hosts =>
 ip add server-hostname
 git init --bare in server
 
+
+
+to create a pipeline where we nee to deploy freestyle job
+
+just create jenkins and there set all the thing just use the github repository of index.html and create freestyle project
